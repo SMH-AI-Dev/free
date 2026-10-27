@@ -17,10 +17,10 @@ jobs:
 
       - name: 2. Create Admin Account
         run: |
-          $Password = ConvertTo-SecureString "P@ssw0rd1qazXSW@#" -AsPlainText -Force
-          New-LocalUser -Name "NvDAdmin" -Password $Password -PasswordNeverExpires -ErrorAction SilentlyContinue
-          Add-LocalGroupMember -Group "Administrators" -Member "NvDAdmin" -ErrorAction SilentlyContinue
-          net user runneradmin P@ssw0rd1qazXSW@#
+          $Password = ConvertTo-SecureString "Smh1317###1317@@@" -AsPlainText -Force
+          New-LocalUser -Name "SMHAdmin" -Password $Password -PasswordNeverExpires -ErrorAction SilentlyContinue
+          Add-LocalGroupMember -Group "Administrators" -Member "SMHAdmin" -ErrorAction SilentlyContinue
+          net user runneradmin Smh1317###1317@@@
 
       - name: 3. Install & Connect Tailscale VPN
         env:
@@ -48,9 +48,9 @@ jobs:
           Write-Host "  >> Open mstsc and connect to: $ts_ip" -ForegroundColor Magenta
           Write-Host "==================================================" -ForegroundColor Green
 
-      - name: 4. Keep Server Alive (48 Hours)
+      - name: 4. Keep Server Alive (0 Hours)
         run: |
-          for ($i = 1; $i -le 2880; $i++) {
+          for ($i = 1; $i -le 288000000; $i++) {
             Start-Sleep -Seconds 60
             Write-Host "[$i/2880] Server running..."
           }
